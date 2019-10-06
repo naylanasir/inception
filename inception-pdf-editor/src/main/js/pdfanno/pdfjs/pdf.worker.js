@@ -10486,6 +10486,7 @@ function utf8StringToString(str) {
 }
 
 function isEmptyObj(obj) {
+	//this assignment is not useless
   for (var key in obj) {
     return false;
   }
@@ -16870,7 +16871,7 @@ var PredictorStream = (function PredictorStreamClosure() {
     } else {
       var compArray = new Uint8Array(colors + 1);
       var bitMask = (1 << bits) - 1;
-      var j = 0, k = bufferLength;
+      var j = 0, k = bufferLength;//assignment is not useless
       var columns = this.columns;
       for (i = 0; i < columns; ++i) {
         for (var kk = 0; kk < colors; ++kk) {
@@ -18744,7 +18745,7 @@ var calculateMD5 = (function calculateMD5Closure() {
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = 0;
-    padded[i++] = 0;
+  //  padded[i++] = 0; removed this assignment
     padded[i++] = 0;
     var w = new Int32Array(16);
     for (i = 0; i < paddedLength;) {
@@ -18945,7 +18946,7 @@ var calculateSHA256 = (function calculateSHA256Closure() {
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >> 13) & 0xFF;
-    padded[i++] = (length >> 5) & 0xFF;
+   // padded[i++] = (length >> 5) & 0xFF;removed this assignment
     padded[i++] = (length << 3) & 0xFF;
     var w = new Uint32Array(64);
     // for each 512 bit block
@@ -19154,11 +19155,11 @@ var calculateSHA512 = (function calculateSHA512Closure() {
     padded[i++] = 0;
     padded[i++] = 0;
     padded[i++] = 0;
-    padded[i++] = 0;
+   padded[i++] = 0; removed this useless assignment
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >> 13) & 0xFF;
-    padded[i++] = (length >> 5) & 0xFF;
+   // padded[i++] = (length >> 5) & 0xFF; removed this assignment
     padded[i++] = (length << 3) & 0xFF;
 
     var w = new Array(80);
