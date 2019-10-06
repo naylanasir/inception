@@ -3922,7 +3922,7 @@ var convertImgDataToPng = (function convertImgDataToPngClosure() {
 
     var adler = adler32(literals, 0, literals.length); // checksum
     idat[pi++] = adler >> 24 & 0xff;
-    idat[pi++] = adler >> 16 & 0xff;
+   // idat[pi++] = adler >> 16 & 0xff; removed this assignment
     idat[pi++] = adler >> 8 & 0xff;
     idat[pi++] = adler & 0xff;
 
