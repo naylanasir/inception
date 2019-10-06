@@ -31,9 +31,9 @@ factory((root.pdfjsDistBuildPdfWorker = {}));
 var pdfjsVersion = '1.4.20';
 var pdfjsBuild = 'b15f335';
 
-  var pdfjsFilePath =
-    typeof document !== 'undefined' && document.currentScript ?
-      document.currentScript.src : null;
+ // var pdfjsFilePath =
+ //   typeof document !== 'undefined' && document.currentScript ?
+ //     document.currentScript.src : null; removed this assignment
 
   var pdfjsLibs = {};
 
