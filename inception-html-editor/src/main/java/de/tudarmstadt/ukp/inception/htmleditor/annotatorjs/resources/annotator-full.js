@@ -3251,7 +3251,7 @@
     };
     for (name in options) {
       if (!__hasProp.call(options, name)) continue;
-      opts = options[name];
+      //opts = options[name]; removed this assignment
       if (__indexOf.call(plugins, name) < 0) {
         plugins.push(name);
       }
