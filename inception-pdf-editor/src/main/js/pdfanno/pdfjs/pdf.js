@@ -1186,6 +1186,7 @@ function utf8StringToString(str) {
 }
 
 function isEmptyObj(obj) {
+	//this assignment is not useless
   for (var key in obj) {
     return false;
   }
