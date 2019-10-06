@@ -5510,7 +5510,7 @@ var JpegImage = (function jpegImage() {
             break;
 
           case 0xFFDA: // SOS (Start of Scan)
-            var scanLength = readUint16();
+            //var scanLength = readUint16(); removed this assignment
             var selectorsCount = data[offset++];
             var components = [], component;
             for (i = 0; i < selectorsCount; i++) {
