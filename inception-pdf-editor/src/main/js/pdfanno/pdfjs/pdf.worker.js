@@ -15410,7 +15410,7 @@ var JpxImage = (function JpxImageClosure() {
         }
       }
       // The LL band is not needed anymore.
-      llItems = ll.items = null;
+     // llItems = ll.items = null; removed this assignment
 
       var bufferPadding = 4;
       var rowBuffer = new Float32Array(width + 2 * bufferPadding);
