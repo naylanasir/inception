@@ -462,7 +462,7 @@
     events = [];
     for (sel in eventsObj) {
       functionName = eventsObj[sel];
-      _ref1 = sel.split(' '), selector = 2 <= _ref1.length ? __slice.call(_ref1, 0, _k = _ref1.length - 1) : (_k, []), event = _ref1[_k++];
+      _ref1 = sel.split(' '), selector = 2 <= _ref1.length ? __slice.call(_ref1, 0, _k = _ref1.length - 1) : (_k = 0, []), event = _ref1[_k++];
       events.push({
         selector: selector.join(' '),
         event: event,
@@ -988,7 +988,7 @@
       this.element.data('annotator', null);
       _ref1 = this.plugins;
       for (name in _ref1) {
-        //plugin = _ref1[name]; removed this assignment
+        plugin = _ref1[name];
         if (typeof (_base = this.plugins[name]).destroy === "function") {
           _base.destroy();
         }
@@ -1090,7 +1090,7 @@
           if (!(h.parentNode != null)) {
             continue;
           }
-          //child = h.childNodes[0];
+          child = h.childNodes[0];
           $(h).replaceWith(h.childNodes);
         }
       }
@@ -1638,7 +1638,7 @@
 
     Editor.prototype.setupDraggables = function() {
       var classes, controls, cornerItem, editor, mousedown, onMousedown, onMousemove, onMouseup, resize, textarea, throttle,
-        _this;
+        _this = this;
       this.element.find('.annotator-resize').remove();
       if (this.element.hasClass(this.classes.invert.y)) {
         cornerItem = this.element.find('.annotator-item:last');
@@ -2026,7 +2026,7 @@
       b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
       i = 0;
       ac = 0;
-     // dec = "";
+      dec = "";
       tmp_arr = [];
       if (!data) {
         return data;
@@ -2067,8 +2067,8 @@
   };
 
   parseToken = function(token) {
-    var payload, _ref3,sig;
-    _ref3 = token.split('.'),payload = _ref3[1],sig = _ref3[2];
+    var head, payload, sig, _ref3;
+    _ref3 = token.split('.'), head = _ref3[0], payload = _ref3[1], sig = _ref3[2];
     return JSON.parse(base64UrlDecode(payload));
   };
 
@@ -2648,7 +2648,6 @@
         annotation.permissions = $.extend(true, {}, this.options.permissions);
       }
       dataKey = type + '-permissions';
-      console.log(dataKey);
       if ($(field).find('input').is(':checked')) {
         return annotation.permissions[type] = [];
       } else {
@@ -2775,8 +2774,6 @@
         annotation.permissions = this.options.permissions;
       }
       dataKey = type + '-permissions';
-      console.log(dataKey);
-      
       if ($(field).find('input').is(':checked')) {
         return annotation.permissions[type] = [type === 'read' ? this.options.groups.world : this.options.groups.consumer];
       } else {
@@ -3253,7 +3250,7 @@
     };
     for (name in options) {
       if (!__hasProp.call(options, name)) continue;
-      //opts = options[name]; removed this assignment
+      opts = options[name];
       if (__indexOf.call(plugins, name) < 0) {
         plugins.push(name);
       }
