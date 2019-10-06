@@ -3679,7 +3679,7 @@ var PDFPageView = (function PDFPageViewClosure() {
       if (this.canvas && PDFJS.maxCanvasPixels > 0) {
         var outputScale = this.outputScale;
         var pixelsInViewport = this.viewport.width * this.viewport.height;
-        var maxScale = Math.sqrt(PDFJS.maxCanvasPixels / pixelsInViewport);
+        //var maxScale = Math.sqrt(PDFJS.maxCanvasPixels / pixelsInViewport); removed this assignment
         if (((Math.floor(this.viewport.width) * outputScale.sx) | 0) *
             ((Math.floor(this.viewport.height) * outputScale.sy) | 0) >
             PDFJS.maxCanvasPixels) {
