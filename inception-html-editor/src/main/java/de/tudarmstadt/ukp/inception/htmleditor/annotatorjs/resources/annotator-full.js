@@ -473,14 +473,14 @@
   };
 
   Delegator.natives = (function() {
-    var key, specials, val;
+    var key, specials;
     specials = (function() {
       var _ref1, _results;
       _ref1 = jQuery.event.special;
       _results = [];
       for (key in _ref1) {
         if (!__hasProp.call(_ref1, key)) continue;
-        val = _ref1[key];
+        //val = _ref1[key];
         _results.push(key);
       }
       return _results;
@@ -1857,7 +1857,7 @@
     }
 
     LinkParser.prototype.get = function(rel, cond) {
-      var d, k, keys, match, v, _k, _len2, _ref2, _results;
+      var d, k, keys, match, _k, _len2, _ref2, _results;
       if (cond == null) {
         cond = {};
       }
@@ -1869,7 +1869,7 @@
         _results = [];
         for (k in cond) {
           if (!__hasProp.call(cond, k)) continue;
-          v = cond[k];
+          //v = cond[k];
           _results.push(k);
         }
         return _results;
@@ -2067,8 +2067,8 @@
   };
 
   parseToken = function(token) {
-    var head, payload, sig, _ref3;
-    _ref3 = token.split('.'), head = _ref3[0], payload = _ref3[1], sig = _ref3[2];
+    var head, payload, _ref3;
+    _ref3 = token.split('.'), head = _ref3[0], payload = _ref3[1];
     return JSON.parse(base64UrlDecode(payload));
   };
 
@@ -3170,8 +3170,8 @@
       field = $(field);
       if (annotation.tags && $.isArray(annotation.tags) && annotation.tags.length) {
         return field.addClass('annotator-tags').html(function() {
-          var string;
-          return string = $.map(annotation.tags, function(tag) {
+          
+          return $.map(annotation.tags, function(tag) {
             return '<span class="annotator-tag">' + Annotator.Util.escape(tag) + '</span>';
           }).join(' ');
         });
