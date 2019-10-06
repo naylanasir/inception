@@ -988,7 +988,7 @@
       this.element.data('annotator', null);
       _ref1 = this.plugins;
       for (name in _ref1) {
-        plugin = _ref1[name];
+        //plugin = _ref1[name]; removed this assignment
         if (typeof (_base = this.plugins[name]).destroy === "function") {
           _base.destroy();
         }
