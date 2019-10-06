@@ -10317,7 +10317,8 @@ var Util = PDFJS.Util = (function UtilClosure() {
  * @class
  * @alias PDFJS.PageViewport
  */
-var PageViewport = PDFJS.PageViewport = (function PageViewportClosure() {
+//removed this assignment var PageViewport = 
+	PDFJS.PageViewport = (function PageViewportClosure() {
   /**
    * @constructor
    * @private
