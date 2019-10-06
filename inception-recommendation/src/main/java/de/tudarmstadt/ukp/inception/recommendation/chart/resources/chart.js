@@ -24,7 +24,8 @@
 function updateLearningCurveDiagram(arrayOfLearningCurves) {
 	
     var xAxixType = 'indexed';
-    //var plotType = 'step'; removed this assignment
+    // assignment cannot be removed
+    var plotType = 'step';
     var xTick = {
     	format : function(a) {
     		return Math.round(1e2 * a) / 1e2;
