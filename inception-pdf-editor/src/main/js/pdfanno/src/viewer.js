@@ -5927,7 +5927,7 @@ window.PDFViewerApplication = {
     pdfViewer.setDocument(pdfDocument);
     var firstPagePromise = pdfViewer.firstPagePromise;
     var pagesPromise = pdfViewer.pagesPromise;
-    var onePageRendered = pdfViewer.onePageRendered;
+    //var onePageRendered = pdfViewer.onePageRendered; removed this assignment
 
     this.pageRotation = 0;
     this.isInitialViewSet = false;
