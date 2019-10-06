@@ -380,7 +380,7 @@ var Stepper = (function StepperClosure() {
         line.appendChild(c('td', JSON.stringify(simplifyArgs(decArgs))));
       }
       if (operatorsToDisplay < operatorList.fnArray.length) {
-        line = c('tr');
+        //line = c('tr'); removed this assignment
         var lastCell = c('td', '...');
         lastCell.colspan = 4;
         chunk.appendChild(lastCell);
