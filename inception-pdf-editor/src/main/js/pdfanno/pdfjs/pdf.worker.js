@@ -30832,7 +30832,7 @@ var Type1Parser = (function Type1ParserClosure() {
             }
             break;
           case 'Subrs':
-            var num = this.readInt();
+            //var num = this.readInt(); removed this aasignment
             this.getToken(); // read in 'array'
             while ((this.getToken()) === 'dup') {
               var index = this.readInt();
