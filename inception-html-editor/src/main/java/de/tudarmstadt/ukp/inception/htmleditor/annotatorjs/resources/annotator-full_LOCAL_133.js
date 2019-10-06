@@ -988,7 +988,7 @@
       this.element.data('annotator', null);
       _ref1 = this.plugins;
       for (name in _ref1) {
-        //plugin = _ref1[name]; removed this assignment
+        plugin = _ref1[name];
         if (typeof (_base = this.plugins[name]).destroy === "function") {
           _base.destroy();
         }
@@ -3253,7 +3253,7 @@
     };
     for (name in options) {
       if (!__hasProp.call(options, name)) continue;
-      //opts = options[name]; removed this assignment
+      opts = options[name];
       if (__indexOf.call(plugins, name) < 0) {
         plugins.push(name);
       }

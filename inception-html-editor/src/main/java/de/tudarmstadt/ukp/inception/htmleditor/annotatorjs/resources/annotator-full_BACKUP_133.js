@@ -473,14 +473,14 @@
   };
 
   Delegator.natives = (function() {
-    var key, specials, val;
+    var key, specials;
     specials = (function() {
       var _ref1, _results;
       _ref1 = jQuery.event.special;
       _results = [];
       for (key in _ref1) {
         if (!__hasProp.call(_ref1, key)) continue;
-        val = _ref1[key];
+        //val = _ref1[key];
         _results.push(key);
       }
       return _results;
@@ -988,7 +988,7 @@
       this.element.data('annotator', null);
       _ref1 = this.plugins;
       for (name in _ref1) {
-        //plugin = _ref1[name]; removed this assignment
+        plugin = _ref1[name];
         if (typeof (_base = this.plugins[name]).destroy === "function") {
           _base.destroy();
         }
@@ -1857,7 +1857,7 @@
     }
 
     LinkParser.prototype.get = function(rel, cond) {
-      var d, k, keys, match, v, _k, _len2, _ref2, _results;
+      var d, k, keys, match, _k, _len2, _ref2, _results;
       if (cond == null) {
         cond = {};
       }
@@ -1869,7 +1869,7 @@
         _results = [];
         for (k in cond) {
           if (!__hasProp.call(cond, k)) continue;
-          v = cond[k];
+          //v = cond[k];
           _results.push(k);
         }
         return _results;
@@ -2057,7 +2057,8 @@
     var i, m, _k, _ref3;
     m = data.length % 4;
     if (m !== 0) {
-      for (i = _k = 0, _ref3 = 4 - m; 0 <= _ref3 ? _k < _ref3 : _k > _ref3; i = 0 <= _ref3 ? ++_k : --_k) {
+    	//assignments to local variable i are removed
+      for (_k = 0, _ref3 = 4 - m; 0 <= _ref3 ? _k < _ref3 : _k > _ref3; 0 <= _ref3 ? ++_k : --_k) {
         data += '=';
       }
     }
@@ -2067,8 +2068,13 @@
   };
 
   parseToken = function(token) {
+<<<<<<< HEAD
     var payload, _ref3,sig;
     _ref3 = token.split('.'),payload = _ref3[1],sig = _ref3[2];
+=======
+    var head, payload,  _ref3;
+    _ref3 = token.split('.'), head = _ref3[0], payload = _ref3[1];
+>>>>>>> 81cd96d000dece777d7db570c28a44656e8767c6
     return JSON.parse(base64UrlDecode(payload));
   };
 
@@ -2713,9 +2719,9 @@
       userAuthorize: function(action, annotation, user) {
         var action_field, permissions, _ref4, _ref5, _ref6, _ref7;
         permissions = annotation.permissions || {};
-        action_field = permissions[action] || [];
         if (_ref4 = this.groups.world, __indexOf.call(action_field, _ref4) >= 0) {
           return true;
+        action_field = permissions[action] || [];
         } else if ((user != null) && (user.userId != null) && (user.consumerKey != null)) {
           if (user.userId === annotation.user && user.consumerKey === annotation.consumer) {
             return true;
@@ -3173,8 +3179,8 @@
       field = $(field);
       if (annotation.tags && $.isArray(annotation.tags) && annotation.tags.length) {
         return field.addClass('annotator-tags').html(function() {
-          var string;
-          return string = $.map(annotation.tags, function(tag) {
+          
+          return $.map(annotation.tags, function(tag) {
             return '<span class="annotator-tag">' + Annotator.Util.escape(tag) + '</span>';
           }).join(' ');
         });
@@ -3253,7 +3259,7 @@
     };
     for (name in options) {
       if (!__hasProp.call(options, name)) continue;
-      //opts = options[name]; removed this assignment
+      opts = options[name];
       if (__indexOf.call(plugins, name) < 0) {
         plugins.push(name);
       }
