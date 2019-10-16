@@ -377,7 +377,7 @@ public class QualifierFeatureEditor
         if (linkedAnnotationFeature == null) {
             linkedAnnotationFeature = getLinkedAnnotationFeature();
         }
-        List<KBHandle> handles;
+        List<KBHandle> handles= new ArrayList<>();
 
         ConceptFeatureTraits traits = readFeatureTraits(linkedAnnotationFeature);
         // Check if kb is actually enabled
