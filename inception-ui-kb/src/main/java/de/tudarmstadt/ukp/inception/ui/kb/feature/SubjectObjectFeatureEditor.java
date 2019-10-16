@@ -359,7 +359,8 @@ public class SubjectObjectFeatureEditor
         if (linkedAnnotationFeature == null) {
             linkedAnnotationFeature = getLinkedAnnotationFeature();
         }
-        List<KBHandle> handles;
+        List<KBHandle> handles = new ArrayList<>();
+       
 
         ConceptFeatureTraits traits = readFeatureTraits(linkedAnnotationFeature);
         String repoId = traits.getRepositoryId();
