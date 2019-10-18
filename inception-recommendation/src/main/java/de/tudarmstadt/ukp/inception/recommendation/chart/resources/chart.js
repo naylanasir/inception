@@ -21,8 +21,6 @@
  * 
  * the arrayOfLeaningCurves also includes x-axis.
  */
- 
-
 function updateLearningCurveDiagram(arrayOfLearningCurves) {
   var xAxixType = 'indexed';
   var plotType = 'step';
