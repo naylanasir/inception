@@ -126,7 +126,7 @@ public class ImageExtractor
             PDXObject xobject = getResources().getXObject(objectName);
 
             if (xobject instanceof PDImageXObject) {
-                //PDImageXObject image = (PDImageXObject) xobject; removed this assignment
+                
                 Matrix ctmNew = getGraphicsState().getCurrentTransformationMatrix();
                 PDRectangle pageRect = this.getCurrentPage().getCropBox();
                 float w = ctmNew.getScalingFactorX();
