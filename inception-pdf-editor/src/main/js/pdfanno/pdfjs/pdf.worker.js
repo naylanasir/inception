@@ -16555,7 +16555,7 @@ var FlateStream = (function FlateStreamClosure() {
     var str = this.str;
     var codeSize = this.codeSize;
     var codeBuf = this.codeBuf;
-    
+ 
     var b;
     while (codeSize < bits) {
       if ((b = str.getByte()) === -1) {
