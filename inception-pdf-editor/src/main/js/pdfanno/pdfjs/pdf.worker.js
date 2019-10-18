@@ -20786,7 +20786,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
       }
       return ranges;
     } else if (format === 12) {
-     length = getLong(data, start + offset + 4);
+      length = getLong(data, start + offset + 4);
       var groups = getLong(data, start + offset + 12);
       p = start + offset + 16;
       ranges = [];
