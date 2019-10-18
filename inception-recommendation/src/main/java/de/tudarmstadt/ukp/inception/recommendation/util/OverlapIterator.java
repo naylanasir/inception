@@ -212,7 +212,7 @@ public class OverlapIterator
 
     private void rewindA()
     {
-        //final String method = "rewindA"; removed this assignment
+       
         if (_log.isTraceEnabled()) {
             _log.trace("   <- rewinding A");
         }
