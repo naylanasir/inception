@@ -27,13 +27,13 @@ function updateLearningCurveDiagram(arrayOfLearningCurves) {
     var plotType = 'step';
     var xTick = {
       format : function(a) {
-        return Math.round(1e2 * a) / 1e2;
+              return Math.round(1e2 * a) / 1e2;
       }
     };
     
       // make the type of x-axis "category" (shows x in category intervals of size 1). 
     // It is for better visualization when the x-axis represents test data size (annotationpage)
-    if ((arrayOfLearningCurves[0][2] - arrayOfLearningCurves[0][1]) > 1)  
+    if ((arrayOfLearningCurves[0][2] - arrayOfLearningCurves[0][1]) > 1) 
       xAxixType = "category";
     
 
