@@ -30515,7 +30515,7 @@ var Type1CharString = (function Type1CharStringClosure() {
               // first part of the charstring and then use rmoveto with
               // (dx, dy). The height argument will not be used for vmtx and
               // vhea tables reconstruction -- ignoring it.
-              //var wy = this.stack.pop();
+              var wy = this.stack.pop();
               wx = this.stack.pop();
               var sby = this.stack.pop();
               sbx = this.stack.pop();
