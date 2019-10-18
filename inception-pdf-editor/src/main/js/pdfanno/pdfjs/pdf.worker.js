@@ -36863,7 +36863,7 @@ var getTilingPatternIR = corePattern.getTilingPatternIR;
 var CMapFactory = coreCMap.CMapFactory;
 var IdentityCMap = coreCMap.IdentityCMap;
 var Metrics = coreMetrics.Metrics;
-//var bidi = coreBidi.bidi;
+var bidi = coreBidi.bidi;
 
 var PartialEvaluator = (function PartialEvaluatorClosure() {
   function PartialEvaluator(pdfManager, xref, handler, pageIndex,
