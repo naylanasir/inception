@@ -1091,7 +1091,7 @@
           if (!(h.parentNode != null)) {
             continue;
           }
-          //child = h.childNodes[0];
+          
           $(h).replaceWith(h.childNodes);
         }
       }
