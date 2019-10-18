@@ -99,7 +99,6 @@ public class PercentageBasedSplitterTest {
         @Test(expected = IllegalArgumentException.class)
         public void thatPercentageHasToBePercentage() {
             PercentageBasedSplitter splitter = new PercentageBasedSplitter(42.1337, 10);
-			
         }
     }
 }
