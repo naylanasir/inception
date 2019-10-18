@@ -23164,7 +23164,7 @@ var BinaryCMapReader = (function BinaryCMapReaderClosure() {
             addHex(start, end, dataSize);
             stream.readHexNumber(end, dataSize);
             addHex(end, start, dataSize);
-           // code = stream.readNumber();
+           code = stream.readNumber();
             // nop
           }
           break;
@@ -31999,7 +31999,7 @@ var CFFParser = (function CFFParserClosure() {
       var encoding = {};
       var bytes = this.bytes;
       var predefined = false;
-      //var hasSupplement = false;
+      var hasSupplement = false;
       var format, i, ii;
       var raw = null;
 
@@ -32059,7 +32059,7 @@ var CFFParser = (function CFFParserClosure() {
           // StandardEncoding, that's a lie but that's ok.
           bytes[dataStart] &= 0x7f;
           readSupplement();
-          //hasSupplement = true;
+          hasSupplement = true;
         }
         raw = bytes.subarray(dataStart, dataEnd);
       }
