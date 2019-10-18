@@ -35292,7 +35292,7 @@ var LabCS = (function LabCSClosure() {
 
 // TODO refactor to remove dependency on image.js
 function _setCoreImage(coreImage_) {
-  //coreImage = coreImage_;
+  coreImage = coreImage_;
   PDFImage = coreImage_.PDFImage;
 }
 exports._setCoreImage = _setCoreImage;
