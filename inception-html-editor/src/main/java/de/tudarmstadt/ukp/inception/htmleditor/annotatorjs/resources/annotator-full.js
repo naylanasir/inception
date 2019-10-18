@@ -462,7 +462,8 @@
     events = [];
     for (sel in eventsObj) {
       functionName = eventsObj[sel];
-      ref1 = sel.split(' '), selector = 2 <= _ref1.length ? __slice.call(_ref1, 0, _k = _ref1.length - 1) : (_k = 0, []), event = _ref1[_k++];
+      _ref1 = sel.split(' '), selector = 2 <= _ref1.length ? __slice.call(_ref1, 0, _k = _ref1.length - 1) : (_k = 0, []), event = _ref1[_k++];
+     
       events.push({
         selector: selector.join(' '),
         event: event,
