@@ -20763,7 +20763,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
     var format = getUshort(data, start + offset);
     var length, ranges, p, i;
     if (format === 4) {
-     // length = getUshort(data, start + offset + 2); removed this assignment
+     length = getUshort(data, start + offset + 2); 
       var segCount = getUshort(data, start + offset + 6) >> 1;
       p = start + offset + 14;
       ranges = [];
