@@ -27825,7 +27825,7 @@ var Font = (function FontClosure() {
 
     var names = name.split('+');
     names = names.length > 1 ? names[1] : names[0];
-    //names = names.split(/[-,_]/g)[0]; removed this assignment
+    names = names.split(/[-,_]/g)[0]; 
     this.isSerifFont = !!(properties.flags & FontFlags.Serif);
     this.isSymbolicFont = !!(properties.flags & FontFlags.Symbolic);
     this.isMonospace = !!(properties.flags & FontFlags.FixedPitch);
