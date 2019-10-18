@@ -18948,7 +18948,7 @@ var calculateSHA256 = (function calculateSHA256Closure() {
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >> 13) & 0xFF;
-   // padded[i++] = (length >> 5) & 0xFF;removed this assignment
+   padded[i++] = (length >> 5) & 0xFF;
     padded[i++] = (length << 3) & 0xFF;
     var w = new Uint32Array(64);
     // for each 512 bit block
