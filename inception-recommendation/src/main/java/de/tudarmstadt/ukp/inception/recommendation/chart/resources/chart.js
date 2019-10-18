@@ -22,32 +22,30 @@
  * the arrayOfLeaningCurves also includes x-axis.
  */
 function updateLearningCurveDiagram(arrayOfLearningCurves) {
+  
   var xAxixType = 'indexed';
   var plotType = 'step';
-  
   var xTick = {
     format : function(a) {
       return Math.round(1e2 * a) / 1e2;
     }
   };
   
-  var isCategoryChart = (arrayOfLearningCurves[0][2] - arrayOfLearningCurves[0][1]) < 1;
-  var size = { height: 200 };
-  // make the type of x-axis "category" (shows x in category intervals of size 1). 
+    // make the type of x-axis "category" (shows x in category intervals of size 1). 
   // It is for better visualization when the x-axis represents test data size (annotation page)
   if (isCategoryChart) {
     xAxixType = "category";
   }
 
-  // if we just have one value per data-row, we cannot visualize a step
-  var plotTypes = {};
-  for (i = 0; i < arrayOfLearningCurves.length; i++) {
-    if (arrayOfLearningCurves[i].length < 3) {
-      plotTypes[arrayOfLearningCurves[i][0]] = 'scatter';
-    } else {
-      plotTypes[arrayOfLearningCurves[i][0]] = 'step';
-    }
-  }
+    // if we just have one value per data-row, we cannot visualize a step
+    var plotTypes = {};
+      for (i = 0; i < arrayOfLearningCurves.length; i++) {
+              if (arrayOfLearningCurves[i].length < 3) {
+                      plotTypes[arrayOfLearningCurves[i][0]] = 'scatter';
+              } else {
+                     plotTypes[arrayOfLearningCurves[i][0]] = 'step';
+              }
+      }
     
   if (arrayOfLearningCurves[0].length < 3) {
     xTick["values"] = [ 0.0, 1.0 ];
