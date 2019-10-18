@@ -533,7 +533,6 @@ if (typeof PDFJS === 'undefined') {
       };
       // this closure will be kept referenced, so clear its vars
       contextPrototype = null;
-      console.log(contextPrototype);
     }
   }
 })();
