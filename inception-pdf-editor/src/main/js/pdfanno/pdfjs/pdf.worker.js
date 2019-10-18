@@ -37949,7 +37949,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
               vMetricY = glyph.vmetric[2];
             } else {
               glyphWidth = glyph.width;
-              //vMetricX = glyph.width * 0.5;
+              vMetricX = glyph.width * 0.5;
               //vMetricY = defaultVMetrics[2];
             }
           } else {
