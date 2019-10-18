@@ -37945,8 +37945,8 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
           if (font.vertical) {
             if (glyph.vmetric) {
               glyphWidth = glyph.vmetric[0];
-              //vMetricX = glyph.vmetric[1];
-              //vMetricY = glyph.vmetric[2];
+              vMetricX = glyph.vmetric[1];
+              vMetricY = glyph.vmetric[2];
             } else {
               glyphWidth = glyph.width;
               //vMetricX = glyph.width * 0.5;
