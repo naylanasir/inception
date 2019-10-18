@@ -8944,8 +8944,7 @@ var NetworkManager = (function NetworkManagerClosure() {
 
     hasPendingRequests: function NetworkManager_hasPendingRequests() {
       for (var xhrId in this.pendingRequests) {
-		  xhrId=undefined;
-        return true;
+		  return true;
       }
       return false;
     },
