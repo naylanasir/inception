@@ -18609,7 +18609,7 @@ var NullStream = (function NullStreamClosure() {
 
 // TODO refactor to remove dependency on parser.js
 function _setCoreParser(coreParser_) {
-coreParser = coreParser_;
+  coreParser = coreParser_;
   EOF = coreParser_.EOF;
   Lexer = coreParser_.Lexer;
 }
@@ -18743,7 +18743,7 @@ var calculateMD5 = (function calculateMD5Closure() {
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = 0;
-    padded[i++] = 0; 
+    padded[i++] = 0;
     padded[i++] = 0;
     var w = new Int32Array(16);
     for (i = 0; i < paddedLength;) {
@@ -20759,7 +20759,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
     var format = getUshort(data, start + offset);
     var length, ranges, p, i;
     if (format === 4) {
-      length = getUshort(data, start + offset + 2); 
+      length = getUshort(data, start + offset + 2);
       var segCount = getUshort(data, start + offset + 6) >> 1;
       p = start + offset + 14;
       ranges = [];
@@ -20786,7 +20786,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
       }
       return ranges;
     } else if (format === 12) {
-     length = getLong(data, start + offset + 4); 
+     length = getLong(data, start + offset + 4);
       var groups = getLong(data, start + offset + 12);
       p = start + offset + 16;
       ranges = [];
@@ -28688,7 +28688,7 @@ var Font = (function FontClosure() {
         }
 
         var format = font.getUint16();
-        var length = font.getUint16(); 
+        var length = font.getUint16();
         var language = font.getUint16();
 
         var hasShortCmap = false;
