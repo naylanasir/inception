@@ -6487,8 +6487,6 @@ document.addEventListener('pagerendered', function (e) {
 
 document.addEventListener('textlayerrendered', function (e) {
   var pageIndex = e.detail.pageNumber - 1;
- // var pageView = PDFViewerApplication.pdfViewer.getPageView(pageIndex); removed this assignment
-
 }, true);
 
 document.addEventListener('namedaction', function (e) {
