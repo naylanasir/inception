@@ -18621,7 +18621,7 @@ exports._setCoreParser = _setCoreParser;
 
 // TODO refactor to remove dependency on colorspace.js
 function _setCoreColorSpace(coreColorSpace_) {
-
+	 coreColorSpace = coreColorSpace_;
   ColorSpace = coreColorSpace_.ColorSpace;
 }
 exports._setCoreColorSpace = _setCoreColorSpace;
@@ -21440,7 +21440,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
 
 // TODO refactor to remove cyclic dependency on fonts.js
 function _setCoreFonts(coreFonts_) {
-
+	coreFonts = coreFonts_;
   Encodings = coreFonts_.Encodings;
   CFFParser = coreFonts_.CFFParser;
 }
@@ -23156,7 +23156,7 @@ var BinaryCMapReader = (function BinaryCMapReaderClosure() {
           stream.readHex(start, dataSize);
           stream.readHexNumber(end, dataSize);
           addHex(end, start, dataSize);
-          
+          code = stream.readNumber();
           // undefined range, skipping
           for (i = 1; i < subitemsCount; i++) {
             incHex(end, dataSize);
