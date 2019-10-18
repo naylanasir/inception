@@ -30834,7 +30834,7 @@ var Type1Parser = (function Type1ParserClosure() {
             }
             break;
           case 'Subrs':
-            var num = this.readInt(); s
+            var num = this.readInt(); 
             this.getToken(); // read in 'array'
             while ((token = this.getToken()) === 'dup') {
               var index = this.readInt();
