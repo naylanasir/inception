@@ -47,44 +47,33 @@ function updateLearningCurveDiagram(arrayOfLearningCurves) {
               }
       }
     
-  if (arrayOfLearningCurves[0].length < 3) {
-    xTick["values"] = [ 0.0, 1.0 ];
-  }
+      if (arrayOfLearningCurves[0].length < 3) {
+        xTick["values"] = [ 0.0, 1.0 ];
+      }
     
   // draw the chart with the help of the arrayOfLearningCurves
   var e = c3.generate({
     bindto: "#canvas",
-    size : size,
-    legend: {
-      show: false
-    },
-    data: {
-      empty:{label:{text:"No Data Available"}},
-      x: "x",
+      data: {
+            empty:{label:{text:"No Data Available"}},
+          x: "x",
       columns: arrayOfLearningCurves,
       types: plotTypes
     },
     axis: {
-      x: {
-        type: xAxixType,
-        tick : xTick
-      },
-      y: {
-        min: 0,
-        //to round off the decimal points of the y-axis values to 4 if it is a decimal number.
-        tick: {
-          format: function(a) {
-            return Math.round(1e4 * a) / 1e4;
+        x: {
+           type: xAxixType,
+           tick : xTick
+        },
+        y: {
+          min: 0,
+          //to round off the decimal points of the y-axis values to 4 if it is a decimal number.
+            tick: {
+                format: function(a) {
+                   return Math.round(1e4 * a) / 1e4;
           }
         }
       }
-    }
-  });
-    
-  window.addEventListener('resize', (event) => {
-    if(isCategoryChart)
-    {
-      e.resize({height: 200, width: $("#html-chart-container").width()-10})
     }
   });
 }
