@@ -28630,7 +28630,7 @@ var Font = (function FontClosure() {
         var start = (font.start ? font.start : 0) + cmap.offset;
         font.pos = start;
 
-        //var version = font.getUint16();
+        var version = font.getUint16();
         var numTables = font.getUint16();
 
         var potentialTable;
