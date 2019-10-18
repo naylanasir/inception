@@ -18617,7 +18617,7 @@ exports._setCoreParser = _setCoreParser;
 
 // TODO refactor to remove dependency on colorspace.js
 function _setCoreColorSpace(coreColorSpace_) {
-	 coreColorSpace = coreColorSpace_;
+  coreColorSpace = coreColorSpace_;
   ColorSpace = coreColorSpace_.ColorSpace;
 }
 exports._setCoreColorSpace = _setCoreColorSpace;
@@ -18743,7 +18743,7 @@ var calculateMD5 = (function calculateMD5Closure() {
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = 0;
-  padded[i++] = 0; 
+    padded[i++] = 0; 
     padded[i++] = 0;
     var w = new Int32Array(16);
     for (i = 0; i < paddedLength;) {
@@ -18944,7 +18944,7 @@ var calculateSHA256 = (function calculateSHA256Closure() {
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >> 13) & 0xFF;
-   padded[i++] = (length >> 5) & 0xFF;
+    padded[i++] = (length >> 5) & 0xFF;
     padded[i++] = (length << 3) & 0xFF;
     var w = new Uint32Array(64);
     // for each 512 bit block
@@ -19153,11 +19153,11 @@ var calculateSHA512 = (function calculateSHA512Closure() {
     padded[i++] = 0;
     padded[i++] = 0;
     padded[i++] = 0;
-   padded[i++] = 0; removed this useless assignment
+    padded[i++] = 0;
     padded[i++] = (length >>> 29) & 0xFF;
     padded[i++] = (length >> 21) & 0xFF;
     padded[i++] = (length >> 13) & 0xFF;
-    padded[i++] = (length >> 5) & 0xFF; 
+    padded[i++] = (length >> 5) & 0xFF;
     padded[i++] = (length << 3) & 0xFF;
 
     var w = new Array(80);
@@ -20759,7 +20759,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
     var format = getUshort(data, start + offset);
     var length, ranges, p, i;
     if (format === 4) {
-     length = getUshort(data, start + offset + 2); 
+      length = getUshort(data, start + offset + 2); 
       var segCount = getUshort(data, start + offset + 6) >> 1;
       p = start + offset + 14;
       ranges = [];
