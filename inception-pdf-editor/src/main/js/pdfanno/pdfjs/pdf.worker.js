@@ -13244,7 +13244,7 @@ var Jbig2Image = (function Jbig2ImageClosure() {
       header.numberOfPages = readUint32(data, position);
       position += 4;
     }
-    //var segments = readSegments(header, data, position, end);
+    var segments = readSegments(header, data, position, end);
     error('Not implemented');
     // processSegments(segments, new SimpleSegmentVisitor());
   }
