@@ -22,20 +22,20 @@
  * the arrayOfLeaningCurves also includes x-axis.
  */
 function updateLearningCurveDiagram(arrayOfLearningCurves) {
-  
-  var xAxixType = 'indexed';
-  var plotType = 'step';
-  var xTick = {
-    format : function(a) {
-      return Math.round(1e2 * a) / 1e2;
-    }
-  };
-  
-    // make the type of x-axis "category" (shows x in category intervals of size 1). 
-  // It is for better visualization when the x-axis represents test data size (annotationpage)
-  if ((arrayOfLearningCurves[0][2] - arrayOfLearningCurves[0][1]) > 1)  
-    xAxixType = "category";
-  
+    
+    var xAxixType = 'indexed';
+    var plotType = 'step';
+    var xTick = {
+      format : function(a) {
+        return Math.round(1e2 * a) / 1e2;
+      }
+    };
+    
+      // make the type of x-axis "category" (shows x in category intervals of size 1). 
+    // It is for better visualization when the x-axis represents test data size (annotationpage)
+    if ((arrayOfLearningCurves[0][2] - arrayOfLearningCurves[0][1]) > 1)  
+      xAxixType = "category";
+    
 
     // if we just have one value per data-row, we cannot visualize a step
     var plotTypes = {};
