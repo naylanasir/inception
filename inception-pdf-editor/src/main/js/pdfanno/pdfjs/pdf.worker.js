@@ -16558,7 +16558,7 @@ var FlateStream = (function FlateStreamClosure() {
     var str = this.str;
     var codeSize = this.codeSize;
     var codeBuf = this.codeBuf;
-
+    this.codeSize = codeSize -= bits;
     var b;
     while (codeSize < bits) {
       if ((b = str.getByte()) === -1) {
@@ -18613,7 +18613,7 @@ var NullStream = (function NullStreamClosure() {
 
 // TODO refactor to remove dependency on parser.js
 function _setCoreParser(coreParser_) {
-//  coreParser = coreParser_;
+coreParser = coreParser_;
   EOF = coreParser_.EOF;
   Lexer = coreParser_.Lexer;
 }
@@ -23156,7 +23156,7 @@ var BinaryCMapReader = (function BinaryCMapReaderClosure() {
           stream.readHex(start, dataSize);
           stream.readHexNumber(end, dataSize);
           addHex(end, start, dataSize);
-          //code = stream.readNumber();
+          
           // undefined range, skipping
           for (i = 1; i < subitemsCount; i++) {
             incHex(end, dataSize);
