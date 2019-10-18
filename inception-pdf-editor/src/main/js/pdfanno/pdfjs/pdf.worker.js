@@ -21440,7 +21440,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
 
 // TODO refactor to remove cyclic dependency on fonts.js
 function _setCoreFonts(coreFonts_) {
-  //coreFonts = coreFonts_;
+
   Encodings = coreFonts_.Encodings;
   CFFParser = coreFonts_.CFFParser;
 }
