@@ -16567,8 +16567,7 @@ var FlateStream = (function FlateStreamClosure() {
     b = codeBuf & ((1 << bits) - 1);
     this.codeBuf = codeBuf >> bits;
     this.codeSize = codeSize -= bits;
-    codeSize -= bits;
-    this.codeSize = codeSize;
+ 
     return b;
   };
 
