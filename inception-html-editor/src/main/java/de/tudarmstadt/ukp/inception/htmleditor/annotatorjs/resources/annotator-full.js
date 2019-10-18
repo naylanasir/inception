@@ -2027,7 +2027,7 @@
       b64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
       i = 0;
       ac = 0;
-     // dec = "";
+     // removed this assignment to dec = "";
       tmp_arr = [];
       if (!data) {
         return data;
