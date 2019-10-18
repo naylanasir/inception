@@ -37590,7 +37590,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
               }
               self.buildPaintImageXObject(resources, args[0], true,
                 operatorList, cacheKey, imageCache);
-            //  args = null;
+              args = null;
               continue;
             case OPS.showText:
               args[0] = self.handleText(args[0], stateManager.state);
