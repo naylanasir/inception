@@ -174,8 +174,8 @@ public class MtasUimaParserLuceneTest
         // Build the query prefixes list from the annotation types
         List<String> prefixes = new ArrayList<String>(annotationTypes);
 
-        // String cql = "([][Token=\"test\" | Token=\"Test\"]) within <Sentence/>";
-        cql = "([Token=\"this\" | Token=\"This\"])";
+        
+        String cql = "([Token=\"this\" | Token=\"This\"])";
         // cql = "([])";
         IndexReader indexReader = DirectoryReader.open(directory);
 
