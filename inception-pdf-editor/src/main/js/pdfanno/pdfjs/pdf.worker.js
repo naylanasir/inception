@@ -28692,8 +28692,8 @@ var Font = (function FontClosure() {
         }
 
         var format = font.getUint16();
-       // var length = font.getUint16(); remove these two assignments
-       // var language = font.getUint16();
+       var length = font.getUint16(); 
+       var language = font.getUint16();
 
         var hasShortCmap = false;
         var mappings = [];
