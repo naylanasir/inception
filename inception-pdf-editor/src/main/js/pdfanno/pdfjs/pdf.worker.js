@@ -18621,7 +18621,7 @@ exports._setCoreParser = _setCoreParser;
 
 // TODO refactor to remove dependency on colorspace.js
 function _setCoreColorSpace(coreColorSpace_) {
-//  coreColorSpace = coreColorSpace_;
+
   ColorSpace = coreColorSpace_.ColorSpace;
 }
 exports._setCoreColorSpace = _setCoreColorSpace;
