@@ -37584,7 +37584,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
                 var cacheEntry = imageCache[cacheKey];
                 if (cacheEntry !== undefined) {
                   operatorList.addOp(cacheEntry.fn, cacheEntry.args);
-               //   args = null;
+                 args = null;
                   continue;
                 }
               }
