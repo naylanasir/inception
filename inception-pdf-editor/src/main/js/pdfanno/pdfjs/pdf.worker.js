@@ -21436,7 +21436,7 @@ var FontRendererFactory = (function FontRendererFactoryClosure() {
 
 // TODO refactor to remove cyclic dependency on fonts.js
 function _setCoreFonts(coreFonts_) {
-	coreFonts = coreFonts_;
+  coreFonts = coreFonts_;
   Encodings = coreFonts_.Encodings;
   CFFParser = coreFonts_.CFFParser;
 }
@@ -23160,7 +23160,7 @@ var BinaryCMapReader = (function BinaryCMapReaderClosure() {
             addHex(start, end, dataSize);
             stream.readHexNumber(end, dataSize);
             addHex(end, start, dataSize);
-           code = stream.readNumber();
+            code = stream.readNumber();
             // nop
           }
           break;
@@ -27822,7 +27822,7 @@ var Font = (function FontClosure() {
 
     var names = name.split('+');
     names = names.length > 1 ? names[1] : names[0];
-    names = names.split(/[-,_]/g)[0]; 
+    names = names.split(/[-,_]/g)[0];
     this.isSerifFont = !!(properties.flags & FontFlags.Serif);
     this.isSymbolicFont = !!(properties.flags & FontFlags.Symbolic);
     this.isMonospace = !!(properties.flags & FontFlags.FixedPitch);
@@ -28688,8 +28688,8 @@ var Font = (function FontClosure() {
         }
 
         var format = font.getUint16();
-       var length = font.getUint16(); 
-       var language = font.getUint16();
+        var length = font.getUint16(); 
+        var language = font.getUint16();
 
         var hasShortCmap = false;
         var mappings = [];
@@ -30831,7 +30831,7 @@ var Type1Parser = (function Type1ParserClosure() {
             }
             break;
           case 'Subrs':
-            var num = this.readInt(); 
+            var num = this.readInt();
             this.getToken(); // read in 'array'
             while ((token = this.getToken()) === 'dup') {
               var index = this.readInt();
@@ -35545,7 +35545,7 @@ var PDFImage = (function PDFImageClosure() {
       for (i = 0; i < h2; i++) {
         py = Math.floor(i * yRatio) * w1Scanline;
         for (j = 0; j < w2; j++) {
-          oldIndex = py + xScaled[j];// this assignment is not useless
+          oldIndex = py + xScaled[j];
           temp[newIndex++] = pixels[oldIndex++];
           temp[newIndex++] = pixels[oldIndex++];
           temp[newIndex++] = pixels[oldIndex++];
@@ -37528,7 +37528,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
               }
               if (imageCache[name] !== undefined) {
                 operatorList.addOp(imageCache[name].fn, imageCache[name].args);
-              args = null;
+                args = null;
                 continue;
               }
 
@@ -37552,7 +37552,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
                 } else if (type.name === 'Image') {
                   self.buildPaintImageXObject(resources, xobj, false,
                     operatorList, name, imageCache);
-                 args = null;
+                  args = null;
                   continue;
                 } else if (type.name === 'PS') {
                   // PostScript XObjects are unused when viewing documents.
@@ -37580,7 +37580,7 @@ var PartialEvaluator = (function PartialEvaluatorClosure() {
                 var cacheEntry = imageCache[cacheKey];
                 if (cacheEntry !== undefined) {
                   operatorList.addOp(cacheEntry.fn, cacheEntry.args);
-                 args = null;
+                  args = null;
                   continue;
                 }
               }
