@@ -13192,7 +13192,7 @@ var Jbig2Image = (function Jbig2ImageClosure() {
           delete pageInfo.height;
         }
         var pageSegmentFlags = data[position + 16];
-        var pageStripingInformation = readUint16(data, position + 17); 
+        var pageStripingInformation = readUint16(data, position + 17);
         pageInfo.lossless = !!(pageSegmentFlags & 1);
         pageInfo.refinement = !!(pageSegmentFlags & 2);
         pageInfo.defaultPixelValue = (pageSegmentFlags >> 2) & 1;
@@ -16555,7 +16555,7 @@ var FlateStream = (function FlateStreamClosure() {
     var str = this.str;
     var codeSize = this.codeSize;
     var codeBuf = this.codeBuf;
-    this.codeSize = codeSize -= bits;
+    
     var b;
     while (codeSize < bits) {
       if ((b = str.getByte()) === -1) {
@@ -16566,7 +16566,7 @@ var FlateStream = (function FlateStreamClosure() {
     }
     b = codeBuf & ((1 << bits) - 1);
     this.codeBuf = codeBuf >> bits;
-   
+    this.codeSize = codeSize -= bits;
     codeSize -= bits;
     this.codeSize = codeSize;
     return b;
