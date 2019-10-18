@@ -71,9 +71,9 @@ function updateLearningCurveDiagram(arrayOfLearningCurves) {
             tick: {
                 format: function(a) {
                    return Math.round(1e4 * a) / 1e4;
-          }
-        }
-      }
-    }
-  });
+           }
+         }
+       }
+     }
+    });
 }
